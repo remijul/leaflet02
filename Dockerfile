@@ -1,4 +1,5 @@
-FROM rocker/shiny-verse:latest
+#FROM rocker/shiny-verse:latest
+FROM openanalytics/r-base
 
 MAINTAINER Remi Julien "contact@dcid-consulting.fr"
 
