@@ -25,11 +25,11 @@ RUN R -e "install.packages(c('shiny', 'rmarkdown', 'magrittr'), repos='https://c
 RUN R -e "install.packages('leaflet', repos='https://cloud.r-project.org/')"
 
 # copy the app to the image
-RUN mkdir /root/leaflet02
-COPY app /root/leaflet02
+RUN mkdir /root/app
+COPY app /root/app
 
 COPY Rprofile.site /usr/lib/R/etc/
 
 EXPOSE 3838
 
-CMD ["R", "-e", "shiny::runApp('/root/leaflet02')"]
+CMD ["R", "-e", "shiny::runApp('/root/app')"]
